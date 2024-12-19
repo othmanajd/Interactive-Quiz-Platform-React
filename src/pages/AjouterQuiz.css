@@ -1,0 +1,110 @@
+/* Style global de la barre de navigation */
+body {
+    display: flex; /* Active Flexbox */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 100vh; /* Hauteur totale de la fenêtre */
+    width: 100%;
+    margin: 0; /* Supprime les marges par défaut */
+    background-color: rgb(255, 255, 255); /* Couleur de fond */
+}
+/* Fixe la barre en haut de la page */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* Hauteur de la barre */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #007BFF; /* Bleu attrayant */
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Assure que la barre est au-dessus des autres éléments */
+}
+
+/* Logo et titre */
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    width: 50px; /* Taille du logo */
+    height: 50px;
+    margin-right: 10px;
+}
+
+.navbar-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Menu de navigation */
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    margin: 0 15px;
+}
+
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+    color: #FFD700; /* Couleur dorée au survol */
+}
+
+/* Icône de profil */
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 25px;
+    background-color: #FFD700; /* Jaune doré */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+/* Contenu principal */
+.main-content-l h2{
+    color: #007BFF;
+}
+
+.main-content-l {
+    background-color: rgb(255, 255, 255); /* Couleur de fond du contenu */
+    border-radius: 8px; /* Ajoute des coins arrondis */
+    width: 400px;
+}
+
+.main-content-l form {
+    margin-top: 25px;
+    padding-bottom: 10px;
+    background-color: rgb(193, 193, 193); /* Couleur de fond du contenu */
+    border-radius: 8px; /* Ajoute des coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère */
+}
+.main-content h1{
+    color: black;
+}

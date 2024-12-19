@@ -1,0 +1,104 @@
+/* Conteneur principal */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre verticalement */
+    align-items: center;    /* Centre horizontalement */
+    height: 100vh;          /* Occupe toute la hauteur de la fenêtre */
+    width: 100vw;
+    background-color: #f4f4f9;
+    margin: 0;              /* Évite tout espace supplémentaire */
+}
+
+/* Titre */
+h1 {
+    color:#378aff;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+/* Formulaire */
+form {
+    background: white;
+    padding: 10px;
+    padding-bottom: 3px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;       /* Limite la largeur maximale */
+    text-align: center;     /* Aligne le contenu du formulaire */
+}
+
+/* Groupe de champs */
+.form-group {
+    margin-bottom: 5px;
+}
+
+.logo {
+    margin-bottom: 0px;
+    width: 100px;  /* Largeur du logo */
+    height: auto;  /* Hauteur ajustée automatiquement pour garder les proportions */
+}
+.auth-options{
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.auth-options p{
+    color: black;
+    
+}
+
+.auth-options p a{
+    font-size: medium;
+    font-weight: 400;
+}
+.form-group select {
+    background-color: #ffffff; /* Fond blanc pour les options */
+    color: #333; /* Couleur du texte */
+    border-radius: 5px;
+    padding: 3px;
+}
+
+/* Étiquettes */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    justify-self: start;
+    font-weight: bold;
+}
+
+/* Champs de saisie */
+input {
+    width: 93%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f4f4f9;
+    color: black;
+}
+
+/* Bouton de connexion */
+.login-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+/* Focus sur le champ */
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
