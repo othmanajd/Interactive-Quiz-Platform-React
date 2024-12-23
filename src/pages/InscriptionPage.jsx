@@ -1,20 +1,51 @@
 import { useState } from "react";
+import axios from "axios";
 import "./Inscription.css";
 import Logo from "../assets/img/Logo.png";
+import { useNavigate } from "react-router-dom";
 
 const Inscription = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [role, setRole] = useState("");
+    const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Logique pour gérer la soumission
-        console.log("Nom :", name);
-        console.log("Email :", email);
-        console.log("Mot de passe :", password);
-        console.log("Rôle :", role);
+
+        const userData = {
+            name: name,
+            email: email,
+            password: password,
+            role: role,
+        };
+
+        try {
+            const response = await axios.post("http://localhost:8080/api/User/Ajouter", userData, {
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            });
+
+            console.log("Utilisateur ajouté avec succès :", response.data);
+            alert("Inscription réussie !");
+            navigate("/");
+        } catch (error) {
+            if (error.response) {
+                // Réponse reçue avec un statut d'erreur
+                console.error("Erreur lors de l'inscription :", error.response.data);
+                alert(`Erreur : ${error.response.data.message || "Inscription échouée."}`);
+            } else if (error.request) {
+                // Pas de réponse du serveur
+                console.error("Erreur réseau :", error.request);
+                alert("Erreur réseau. Veuillez vérifier votre connexion.");
+            } else {
+                // Erreur inconnue
+                console.error("Erreur :", error.message);
+                alert("Une erreur inconnue s'est produite.");
+            }
+        }
     };
 
     return (
